@@ -17,6 +17,13 @@ const App = () => {
       )
       .then(res => setCoinData(res.data))
       .catch(err => console.log(err));
+
+    axios
+      .get(
+        "https://api.coingecko.com/api/v3/coins/"
+      )
+      .then(res => console.log(res.data))
+      .catch(err => console.log(err));
   }, []);
   return (
     <div className="App">
